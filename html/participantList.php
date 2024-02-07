@@ -16,6 +16,10 @@
         $DBName = "eventsdb";
         $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
         $loggedIn = $_SESSION['loggedIn'] ?? false;
+
+        $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
+        $getParticipants = "SELECT * FROM participants;";
+        $participantsResult = mysqli_query($conn, $getParticipants);
     ?>
     <header>
         <div class="logo">
@@ -44,5 +48,34 @@
             ?>
         </nav>
     </header>
+    <main>
+        <section>
+            <table class="participants">
+                    <thead>
+                        <tr class="category">
+                            <th>Full Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $rownum = mysqli_num_rows($participantsResult);
+
+                        if($rownum>0){
+                            while ($participants = mysqli_fetch_assoc($participantsResult)){
+                                echo "
+                                <tr class='choice'>
+                                    <td>".$participants['fullName']."</td>
+                                    <td>
+                                        <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
+                                    </td>
+                                </tr>";
+                            }
+                        }
+                        ?>
+                    </tbody>
+                </table>
+        </section>
+    </main>
 </body>
 </html>

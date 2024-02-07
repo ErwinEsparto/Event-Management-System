@@ -74,7 +74,7 @@
                 <div class="contactthree">
                     <img src="../images/facebook.png">
                     <h2> Facebook Page  </h2>
-                    <p> EMS </p>
+                    <p> EMS Official </p>
                 </div>
             </div>
         </section>
