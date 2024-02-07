@@ -16,7 +16,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 55%;
 }
 nav a{
     color: black;
@@ -77,7 +77,7 @@ section.top .event, section.bottom .event {
     box-sizing: border-box;
     box-shadow: 0px 0px 15px gray;
     &:hover{
-        box-shadow: 0px 0px 20px cornflowerblue;
+        box-shadow: 0px 0px 50px cornflowerblue;
     }
 }
 .description {
