@@ -25,7 +25,6 @@
             <div class="navigation">
                 <a href="home.php"> Home </a>
                 <a href="events.php"> Events </a>
-                <a href="participantRegistration.php"> Registration </a>
                 <a href="aboutUs.php"> About Us </a>
             </div>
             <?php

@@ -16,6 +16,16 @@
         $DBName = "eventsdb";
         $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
         $loggedIn = $_SESSION['loggedIn'] ?? false;
+
+        $getParticipants = "SELECT * FROM participants;";
+        $participantsResult = mysqli_query($conn, $getParticipants);
+
+        if(isset($_GET['participantID'])){
+            $query = "DELETE FROM participants WHERE participantID = '$_GET[participantID]'";
+            $delete = mysqli_query ($conn, $query);
+            header("location:participantList.php");
+            die();
+        }
     ?>
     <header>
         <div class="logo">
@@ -25,7 +35,6 @@
             <div class="navigation">
                 <a href="home.php"> Home </a>
                 <a href="events.php"> Events </a>
-                <a href="participantRegistration.php"> Registration </a>
                 <a href="aboutUs.php"> About Us </a>
             </div>
             <?php
@@ -44,5 +53,44 @@
             ?>
         </nav>
     </header>
+    <main>
+        <section>
+            <table class="participants">
+                    <thead>
+                        <tr class="category">
+                            <th>Full Name</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Section</th>
+                            <th>Email Address</th>
+                            <th>Student Number</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $rownum = mysqli_num_rows($participantsResult);
+
+                        if($rownum>0){
+                            while ($participants = mysqli_fetch_assoc($participantsResult)){
+                                echo "
+                                <tr class='choice'>
+                                    <td>".$participants['fullName']."</td>
+                                    <td>".$participants['course']."</td>
+                                    <td>".$participants['year']."</td>
+                                    <td>".$participants['section']."</td>
+                                    <td>".$participants['emailAddress']."</td>
+                                    <td>".$participants['studentNumber']."</td>
+                                    <td>
+                                        <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
+                                    </td>
+                                </tr>";
+                            }
+                        }
+                        ?>
+                    </tbody>
+                </table>
+        </section>
+    </main>
 </body>
 </html>

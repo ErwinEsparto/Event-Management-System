@@ -25,7 +25,6 @@
             <div class="navigation">
                 <a href="home.php"> Home </a>
                 <a href="events.php"> Events </a>
-                <a href="participantRegistration.php"> Registration </a>
                 <a class="active" href="#"> About Us </a>
             </div>
             <?php
@@ -74,7 +73,7 @@
                 <div class="contactthree">
                     <img src="../images/facebook.png">
                     <h2> Facebook Page  </h2>
-                    <p> EMS </p>
+                    <p> EMS Official </p>
                 </div>
             </div>
         </section>
