@@ -1,0 +1,103 @@
+body {
+    background-color: ghostwhite;
+    font-family: "Century Gothic";
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loginform {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px gray;
+    width: 60%;
+}
+.loginform h1{
+    font-size: 1.5em;
+    margin: 0 0 30px 0;
+}
+.loginform form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 40px 80px;
+    width: 100%;
+}
+.loginform form h1 {
+    text-align: center;
+}
+.loginform form label {
+    font-size: 1.3em;
+}
+.loginform form input {
+    background: transparent;
+    padding: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    font-family: "Century Gothic";
+    font-size: 1.1em;
+}
+.loginform form input[type="submit"] {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    width: 50%;
+    border-radius: 25px;
+    transition: .7s;
+    &:hover {
+        background-color: skyblue;
+        cursor: pointer;
+    }
+}
+.loginform form p.result{
+    color: red;
+}
+.loginform img{
+    height: 550px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.socials {
+    display: flex;
+    flex-direction: column;
+}
+.socials p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.accounts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+}
+.media p {
+    margin-left: 10px;
+}
+.media img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px gray;
+}

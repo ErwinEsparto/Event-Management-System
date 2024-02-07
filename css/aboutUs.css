@@ -1,0 +1,110 @@
+body {
+    background-color: ghostwhite;
+    font-family: "Century Gothic";
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px gray;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: .7s;
+    &:hover {
+        background-color: cornflowerblue;
+        color: white;
+    }
+}
+nav, .logo {
+    margin: 0 50px;
+}
+nav a.active{
+    color: cornflowerblue;
+    pointer-events: none;
+}
+nav .adminLogged {
+    margin-left: 20px;
+}
+nav a.btnLogin {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px 30px;
+    &:hover {
+        background-color: skyblue;
+        color: black;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#main {
+    background-image: url("../images/mainbg.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+section#main .title {
+    padding: 50px;
+}
+section#main .title h1 {
+    font-family: 'Impact';
+    font-size: 10em;
+    margin: 0;
+    text-align: center;
+}
+section#main .title .description {
+    font-family: 'Arial';
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-align: justify;
+    text-align-last: center;
+}
+section#map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contactus {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin: 50px 0;
+    padding: 0;
+    width: 100%;
+}
+.contacts .contactone, .contacts .contacttwo, .contacts .contactthree {
+    width: 25%;
+    margin: 20px 70px;
+    text-align: justify;
+    text-align-last: center;
+}
+.contacts .contactone img, .contacts .contacttwo img, .contacts .contactthree img {
+    width: 30px;
+    text-align: center;
+}
