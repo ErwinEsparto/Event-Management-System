@@ -17,8 +17,17 @@
         $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
         $loggedIn = $_SESSION['loggedIn'] ?? false;
 
-        $getParticipants = "SELECT * FROM participants;";
-        $participantsResult = mysqli_query($conn, $getParticipants);
+        $getIBITSParticipants = "SELECT * FROM participants WHERE eventReg='IBITS Week';";
+        $IBITSparticipants = mysqli_query($conn, $getIBITSParticipants);
+
+        $getValentinesParticipants = "SELECT * FROM participants WHERE eventReg='Valentines';";
+        $Valentinesparticipants = mysqli_query($conn, $getValentinesParticipants);
+
+        $getYearEndParticipants = "SELECT * FROM participants WHERE eventReg='Year-End Party';";
+        $YearEndparticipants = mysqli_query($conn, $getYearEndParticipants);
+
+        $getYearNewParticipants = "SELECT * FROM participants WHERE eventReg='Year-New Party';";
+        $YearNewparticipants = mysqli_query($conn, $getYearNewParticipants);
 
         if(isset($_GET['participantID'])){
             $query = "DELETE FROM participants WHERE participantID = '$_GET[participantID]'";
@@ -54,42 +63,153 @@
         </nav>
     </header>
     <main>
-        <section>
-            <table class="participants">
-                    <thead>
-                        <tr class="category">
-                            <th>Full Name</th>
-                            <th>Course</th>
-                            <th>Year</th>
-                            <th>Section</th>
-                            <th>Email Address</th>
-                            <th>Student Number</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                        $rownum = mysqli_num_rows($participantsResult);
+        <section class="top">
+            <section class="event IBITS">
+                <div class="table">
+                    <h2> IBITS WEEK </h2>
+                    <table class="participants">
+                        <thead>
+                            <tr class="category">
+                                <th>Full Name</th>
+                                <th>Course</th>
+                                <th>Email Address</th>
+                                <th>Student Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            $rownum = mysqli_num_rows($IBITSparticipants);
 
-                        if($rownum>0){
-                            while ($participants = mysqli_fetch_assoc($participantsResult)){
-                                echo "
-                                <tr class='choice'>
-                                    <td>".$participants['fullName']."</td>
-                                    <td>".$participants['course']."</td>
-                                    <td>".$participants['year']."</td>
-                                    <td>".$participants['section']."</td>
-                                    <td>".$participants['emailAddress']."</td>
-                                    <td>".$participants['studentNumber']."</td>
-                                    <td>
-                                        <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
-                                    </td>
-                                </tr>";
+                            if($rownum>0){
+                                while ($participants = mysqli_fetch_assoc($IBITSparticipants)){
+                                    echo "
+                                    <tr class='choice'>
+                                        <td>".$participants['fullName']."</td>
+                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['emailAddress']."</td>
+                                        <td>".$participants['studentNumber']."</td>
+                                        <td>
+                                            <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
+                                        </td>
+                                    </tr>";
+                                }
                             }
-                        }
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="event valentines">
+                <div class="table">
+                    <h2> VALENTINES </h2>
+                    <table class="participants">
+                        <thead>
+                            <tr class="category">
+                                <th>Full Name</th>
+                                <th>Course</th>
+                                <th>Email Address</th>
+                                <th>Student Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            $rownum = mysqli_num_rows($Valentinesparticipants);
+
+                            if($rownum>0){
+                                while ($participants = mysqli_fetch_assoc($Valentinesparticipants)){
+                                    echo "
+                                    <tr class='choice'>
+                                        <td>".$participants['fullName']."</td>
+                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['emailAddress']."</td>
+                                        <td>".$participants['studentNumber']."</td>
+                                        <td>
+                                            <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
+                                        </td>
+                                    </tr>";
+                                }
+                            }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+        <section class="bottom">
+            <section class="event yearend">
+                <div class="table">
+                    <h2> Year-End Party </h2>
+                    <table class="participants">
+                        <thead>
+                            <tr class="category">
+                                <th>Full Name</th>
+                                <th>Course</th>
+                                <th>Email Address</th>
+                                <th>Student Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            $rownum = mysqli_num_rows($YearEndparticipants);
+
+                            if($rownum>0){
+                                while ($participants = mysqli_fetch_assoc($YearEndparticipants)){
+                                    echo "
+                                    <tr class='choice'>
+                                        <td>".$participants['fullName']."</td>
+                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['emailAddress']."</td>
+                                        <td>".$participants['studentNumber']."</td>
+                                        <td>
+                                            <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
+                                        </td>
+                                    </tr>";
+                                }
+                            }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="event yearnew">
+                <div class="table">
+                    <h2> Year-New Party </h2>
+                    <table class="participants">
+                        <thead>
+                            <tr class="category">
+                                <th>Full Name</th>
+                                <th>Course</th>
+                                <th>Email Address</th>
+                                <th>Student Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            $rownum = mysqli_num_rows($YearNewparticipants);
+
+                            if($rownum>0){
+                                while ($participants = mysqli_fetch_assoc($YearNewparticipants)){
+                                    echo "
+                                    <tr class='choice'>
+                                        <td>".$participants['fullName']."</td>
+                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['emailAddress']."</td>
+                                        <td>".$participants['studentNumber']."</td>
+                                        <td>
+                                            <a href='participantList.php?participantID=".$participants['participantID']."'> Delete </a>
+                                        </td>
+                                    </tr>";
+                                }
+                            }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </section>
     </main>
 </body>
