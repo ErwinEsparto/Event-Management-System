@@ -16,8 +16,9 @@
         $studentYS = $_POST['studentYS'];
         $studentNumber = $_POST['studentNumber'];
         $studentEmail = $_POST['studentEmail'];
+        $eventName = mysqli_real_escape_string($conn, $_POST['eventName']);
 
-        $insertQuery = "INSERT INTO participants (fullName, yearCourse, studentNumber, emailAddress) VALUES ('$studentName', '$studentYS', '$studentNumber', '$studentEmail')";
+        $insertQuery = "INSERT INTO participants (fullName, yearCourse, studentNumber, emailAddress, eventReg) VALUES ('$studentName', '$studentYS', '$studentNumber', '$studentEmail', '$eventName')";
 
         if (mysqli_query($conn, $insertQuery)) {
             echo "<script>alert('Register successfully'); window.location.href = 'http://localhost/Event-Management-System/html/home.php';</script>";
