@@ -1,5 +1,7 @@
 body {
-    background-color: ghostwhite;
+    background-image: linear-gradient(rgb(0,0,0,0.3), rgb(0,0,0,0.3)), url("../images/homebg.jpg");
+    background-size: cover;
+    background-position: center center;
     font-family: "Century Gothic";
     margin: 0;
     padding: 0;
@@ -51,6 +53,37 @@ nav a.btnLogin {
 }
 main {
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    margin-top: 200px;
+}
+section.title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 100px;
+    width: 60%;
+}
+section.title h1 {
+    font-family: "Impact";
+    font-size: 6em;
+    margin: 0;
+}
+section.title p {
+    font-size: 1.1em;
+}
+section.title hr {
+    width: 100%;
+}
+section.title a{
+    text-decoration: none;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+    transition: .7s;
+    padding: 15px 30px;
+    width: 10%;
+    border-radius: 25px;
+    &:hover {
+        background-color: skyblue;
+        color: black;
+    }
 }

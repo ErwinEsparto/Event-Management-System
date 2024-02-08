@@ -43,5 +43,13 @@
             ?>
         </nav>
     </header>
+    <main>
+        <section class="title">
+            <h1> Event Management System </h1> <hr>
+            <p> An online event management system simplifies the entire event planning process by leveraging digital platforms to handle tasks 
+                to ensure seamless organization and execution of events.</p>
+            <a href="events.php"> Get Started </a>
+        </section>
+    </main>
 </body>
 </html>
