@@ -14,7 +14,7 @@ body {
 
 }
 .registerInfo-container {
-    background-image: linear-gradient(rgb(43, 2, 43), rgb(52, 0, 73), rgb(52, 0, 73), rgb(52, 0, 73));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.74), white);
     border-radius: 5%;
     justify-content: center;
     box-shadow: 0 0 10px rgba(255, 106, 210, 0.781);
@@ -30,8 +30,8 @@ body {
     padding: 10px 15px;
     border-radius: 30%;
     font-size: 25px;
-    background-color: rgb(188, 56, 221);
-    color: black;
+    background-color: rgb(26, 71, 168);
+    color: white;
     cursor: pointer;
     transition: .5s;
     &:hover {
@@ -66,12 +66,12 @@ select {
     outline: none;
     border: none;
     border-bottom: 2px solid rgb(78, 78, 78);
-    color: #ffffff;
+    color: #4e4e4e;
     padding: 15px 15px 15px 0;
 }
 ::placeholder {
-    color: #ffffff; /* You can change this to the color you prefer */
+    color: #000000; /* You can change this to the color you prefer */
 }
 option {
-    background-color: rgb(30, 0, 58);
+    background-color: white;
 }   
