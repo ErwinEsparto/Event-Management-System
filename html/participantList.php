@@ -86,7 +86,7 @@
                                     echo "
                                     <tr class='choice'>
                                         <td>".$participants['fullName']."</td>
-                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['yearCourse']."</td>
                                         <td>".$participants['emailAddress']."</td>
                                         <td>".$participants['studentNumber']."</td>
                                         <td>
@@ -122,7 +122,7 @@
                                     echo "
                                     <tr class='choice'>
                                         <td>".$participants['fullName']."</td>
-                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['yearCourse']."</td>
                                         <td>".$participants['emailAddress']."</td>
                                         <td>".$participants['studentNumber']."</td>
                                         <td>
@@ -160,7 +160,7 @@
                                     echo "
                                     <tr class='choice'>
                                         <td>".$participants['fullName']."</td>
-                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['yearCourse']."</td>
                                         <td>".$participants['emailAddress']."</td>
                                         <td>".$participants['studentNumber']."</td>
                                         <td>
@@ -196,7 +196,7 @@
                                     echo "
                                     <tr class='choice'>
                                         <td>".$participants['fullName']."</td>
-                                        <td>".$participants['courseYearSection']."</td>
+                                        <td>".$participants['yearCourse']."</td>
                                         <td>".$participants['emailAddress']."</td>
                                         <td>".$participants['studentNumber']."</td>
                                         <td>

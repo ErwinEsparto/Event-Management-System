@@ -1,8 +1,9 @@
 body {
-    background-image: linear-gradient(rgb(0,0,0,0.3), rgb(0,0,0,0.3)), url("../images/homebg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/homebg.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
     font-family: "Century Gothic";
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -10,9 +11,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 15px gray;
+    z-index: 1;
 }
 nav {
     display: flex;
@@ -53,37 +56,175 @@ nav a.btnLogin {
 }
 main {
     display: flex;
-    margin-top: 200px;
+    height: 100vh;
+    color: white;
 }
-section.title {
+section.welcome {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 45%;
+    padding-top: 150px;
+    z-index: 0;
+}
+section .title {
+    margin: 0 80px;
+}
+section #middle{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
-    color: white;
-    padding: 100px;
-    width: 60%;
+    padding: 25px 50px 15px 50px;
+    width: 20%;
+    height: 120%;
+    margin-top: -80px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px gray;
 }
-section.title h1 {
-    font-family: "Impact";
-    font-size: 6em;
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.head h2 {
     margin: 0;
 }
-section.title p {
-    font-size: 1.1em;
-}
-section.title hr {
-    width: 100%;
-}
-section.title a{
-    text-decoration: none;
-    text-align: center;
+.head a {
     background-color: cornflowerblue;
     color: white;
-    transition: .7s;
-    padding: 15px 30px;
-    width: 10%;
+    padding: 10px 30px;
+    text-decoration: none;
     border-radius: 25px;
+    transition: .7s;
     &:hover {
         background-color: skyblue;
-        color: black;
     }
+}
+.middle p {
+    margin-left: 50px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.savings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.savings p, .cryptosavings p {
+    margin-left: 30px;
+}
+section .title h1 {
+    font-size: 5em;
+    margin-bottom: 0;
+}
+section .title p {
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 1.3em;
+}
+section.news{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: cornflowerblue;
+    height: 40%;
+    width: 100%;
+    margin-top: 490px;
+}
+section .upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    margin-top: -100px;
+}
+.upper .upperNews, .lower .lowerNews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: 20%;
+    margin: 0 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px gray;
+}
+section .lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50%;
+    margin: 20px 0;
+    width: 100%;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.description {
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+}
+.description h3, .description p {
+    margin: 5px 0 0 0;
+}
+.description a {
+    margin: 5px 0 0 0;
+    color: black;
+    text-decoration: none;
+}
+.description a:hover {
+    color: cornflowerblue;
+}
+.lower .description {
+    color: white;
+}
+.lower a {
+    text-decoration: none;
+}
+.lower .IBITSNews {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/ibitsbg.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.lower a.IBITSNews:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/ibitsbg.jpg");
+}
+.lower .cscNews {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/cscbg.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.lower a.cscNews:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/cscbg.jpg");
+}
+.lower a:hover{
+    color: black;
+}
+.upperNews .icon img, .lowerNews .icon img{
+    width: 50px;
+    margin: 0;
+}
+.lowerNews .icon img{
+    border-radius: 25px;
+}
+.container img {
+    width: 150px;
+    height: 150px;
+    margin: 0;
 }

@@ -22,7 +22,7 @@ body {
 .registrationForm {
     display: block;
     width:500px;
-    padding:30px
+    padding:30px;
 }
 .close-btn {
     position: relative;
@@ -30,14 +30,14 @@ body {
     padding: 10px 15px;
     border-radius: 30%;
     font-size: 25px;
-    background-color: rgb(26, 71, 168);
+    background-color: cornflowerblue;
     color: white;
     cursor: pointer;
     transition: .5s;
     &:hover {
-        background-color: rgb(56, 1, 35);
-        color: aliceblue;
-        box-shadow: 0 0 10px rgba(255, 106, 210, 0.781);
+        background-color: skyblue;
+        color: black;
+        box-shadow: 0 0 10px cornflowerblue;
     }
 }
 .abttn button {
@@ -48,8 +48,8 @@ body {
     cursor: pointer;
     transition: .5s;
     &:hover{
-        box-shadow: 0 0 10px rgba(224, 119, 186, 0.781);
-        background: linear-gradient(45deg, rgb(56, 1, 35), rgb(56, 1, 35));;
+        box-shadow: 0 0 10px white;
+        background: linear-gradient(45deg, cornflowerblue, #2d44c5);;
         color:white;
     }
 }

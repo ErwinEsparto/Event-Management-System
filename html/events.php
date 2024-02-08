@@ -86,7 +86,7 @@
     </main>
     <div id="registerInfo" class="registerInfo">
         <div class="registerInfo-container">
-            <form class="registrationForm" action="http://localhost/Event-Management-System/dbConnections/eventsdb.php" method="post">
+            <form class="registrationForm" action="../dbConnections/eventsdb.php" method="post">
                 <div class="contentContainer" style="text-align: right;"><span class="close-btn" onclick="closeRegisterForm()">&times;</span></div>
                 <div class="contentContainer"><p style="font-size: 32px; padding: 15px;text-align: center; color:white; font-family:monospace; background-color:rgb(26, 71, 168);">Student Information<hr></p></div>
                 <div class="contentContainer" style="display:block;">
@@ -109,10 +109,10 @@
                         </div>
                         <div class="contents">
                             <select name="eventName" required>
-                                <option value="BSIT 1-1">IBITS WEEK</option>
-                                <option value="BSIT 2-1">Valentines</option>
-                                <option value="BSIT 3-1">Year-End Party</option>
-                                <option value="BSIT 3-1">Year-New Party</option>
+                                <option value="IBITS Week">IBITS WEEK</option>
+                                <option value="Valentines">Valentines</option>
+                                <option value="Year-End Party">Year-End Party</option>
+                                <option value="Year-New Party">Year-New Party</option>
                             </select>
                         </div>
                         <div style="padding-top: 20px;"><a href="#" class="abttn"><button type="submit" name="registerNow" style="background-color: transparent; border: none;"><strong>Submit</strong></button></a></div>
