@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+.registerInfo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(148, 148, 148, 0.3);
+    justify-content: center;
+    align-items: center;
+
+}
+.registerInfo-container {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.74), white);
+    border-radius: 5%;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(150, 145, 148, 0.781);
+}
+.registrationForm {
+    display: block;
+    width:500px;
+    padding:30px;
+}
+.close-btn {
+    position: relative;
+    font-weight: bold;;
+    padding: 10px 15px;
+    border-radius: 30%;
+    font-size: 25px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        background-color: skyblue;
+        color: black;
+        box-shadow: 0 0 10px cornflowerblue;
+    }
+}
+.abttn button {
+    background: linear-gradient(45deg, #2d44c5, #79e9f8);
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: .5s;
+    &:hover{
+        box-shadow: 0 0 10px white;
+        background: linear-gradient(45deg, cornflowerblue, #2d44c5);;
+        color:white;
+    }
+}
+.contents {
+    padding: 15px;
+}
+input,
+select {
+    width: 100%;
+    font-size: 26px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(78, 78, 78);
+    color: #4e4e4e;
+    padding: 15px 15px 15px 0;
+}
+::placeholder {
+    color: #000000; /* You can change this to the color you prefer */
+}
+option {
+    background-color: white;
+}   
