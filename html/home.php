@@ -90,7 +90,7 @@
                         <p> Check out the latest updates!  </p>
                     </div>
                 </a>
-                <a href="https://cybersecuritynews.com/" target="_blank" class="lowerNews cscNews">
+                <a href="https://www.facebook.com/CSCPUPBN" target="_blank" class="lowerNews cscNews">
                     <div class="icon">
                         <img src="../images/csc.jpg"/>
                     </div>
